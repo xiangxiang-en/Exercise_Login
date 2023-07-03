@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="utf-8">
+        <style>
+            body{
+                background-color: white;
+            }
+
+            #user, #password{
+                width: 180px;
+                height: 25px;
+                margin: 15px;
+            }
+            
+            #container{
+                padding: 15px;
+                width: 230px;
+                height: 200px;
+                background-color: white;
+                border-radius: 7px;
+                border-top: 10px solid #df5334;
+                box-shadow: 0 0px 70px rgba(0, 0, 0, 0.1);
+                position:relative;   
+                margin: auto;
+                top: 100px;
+                text-align:center;  
+            }
+
+            .system_name{
+                position:relative;   
+                margin: auto;
+                top: 100px;
+                text-align:center; 
+            }
+        </style>
+    </head>
+    <body>
+        <div class="system_name">
+        <h2>登入</h2>
+        </div>
+            <div id="container">
+                <div class="login">  
+                    
+                        <script>
+                            function login(){
+                                    if(user.value == "user" && password.value == "0000"){
+                                        window.alert('登入成功');
+                                    }
+                                    else{
+                                        window.alert('登入失敗');
+                                        password.value="";
+                                    }
+                                }
+                                function enter(event, nextField){
+                                    if (event.keyCode === 13){
+                                        event.preventDefault();
+                                        if (nextField === 'submit'){
+                                            login();
+                                        }else{
+                                            document.getElementById(nextField).focus();
+                                        }
+                                    }
+                                }
+                        </script>
+                    <form onsubmit="login()">
+                    <input type="textbox" id="user" name="user" placeholder="帳號"onkeydown="enter(event, 'password')">
+                    <p><input type="password" id="password" name="password" placeholder="密碼" onkeydown="enter(event,'submit')">
+                    <p><input type="submit" value="登入" onclick="login()">
+                    </form> 
+                </div>
+            </div>
+    </body>
+</html>
