@@ -1,0 +1,54 @@
+body{
+    background-color: transparent;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -250px;
+    margin-top: -150px;
+    font-size: larger;
+}
+#container1{
+    color: cornflowerblue;
+    font-size: x-large;
+}
+#container1 input{
+    border:1px solid cornflowerblue ;
+    border-radius: 6px;
+    font-size: 15px;
+}
+#container1 img{
+    width: 30px;
+    height: 30px;
+}
+#error{
+    color: rgb(216, 106, 106);
+    font-weight: bold;
+}
+#OK {
+    margin-top: 10px;
+    background-color:transparent;
+    padding: 3px;
+    width: 80px;
+}
+@media screen and (max-width:550px){
+    body{
+        background-color: rgb(133, 180, 205);
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        margin-left: -150px;
+    }
+    #container1{
+        color: whitesmoke;
+        font-size: x-large;
+    }
+    #PWD{
+        margin-left: 0px;
+    } 
+}
+
+@media screen and (min-width:1500px) {
+    body{
+        background-color: rgb(215, 234, 139);
+    }
+}

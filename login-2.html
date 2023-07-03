@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第二種方法</title> <!--運用HTML5有的防呆的方法-->
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <h1>LOGIN</h1>
+    <form onsubmit="OK()">
+        <div id="container1">
+
+            <img src="img/user.png" alt="">
+            <label for="">Account:</label>&nbsp;&nbsp;
+            <input type="text" id="Acc" name="Acc" placeholder="Username" required>
+            <div>
+                <img src="img/padlock.png" alt="">
+                <label name="pwd" for="">Password:</label>
+                <input type="password" id="PWD" name="PWD" placeholder="Password" required>
+            </div>
+        </div>
+        <div id="container2">
+            <label for="" id="error"><b>錯誤</b></label>
+            <br>
+            <button type="submit" id="OK" value="OK">登入</button>
+        </div>
+    </form>
+    <script src="login.js"></script>
+</body>
+</html>
