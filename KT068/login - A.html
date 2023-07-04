@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+  <title>登入</title>
+  <meta charset="utf-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 200px;
+    }
+    
+    h2 {
+      color: #333;
+    }
+    
+    input[type="text"], input[type="password"] {
+      padding: 10px;
+      margin: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>實習練習<br>登入</h2>
+  <form action="/login" method="POST" onsubmit="return validateForm()">
+    <input type="text" name="username" placeholder="使用者名稱" required><br>
+    <input type="password" name="password" placeholder="密碼" required><br>
+    <input type="submit" value="登入">
+    <script>
+      function validateForm() {
+        var username = document.forms[0]["username"].value;
+        var password = document.forms[0]["password"].value;
+        
+        if (username === "user" && password === "0000") {
+          window.location.href = "http://www.csmu.edu.tw";
+        } else {
+          alert("使用者名稱或密碼錯誤。");
+          return false;
+        }
+      }
+    </script>
+  </form>
+</body>
+</html>
