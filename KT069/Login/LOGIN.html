@@ -1,0 +1,72 @@
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #5fe3e0;
+            margin: 0;
+        }
+
+        .main-bg {
+            background: #9d8bdd;
+            padding: 20px;
+            border-radius: 5px;
+   
+        }
+	
+        /* Rest of the CSS styles... */
+    </style>
+</head>
+<body>
+	<div class="main-bg">
+		<!-- title -->
+		<h1 style="color: MidnightBlue; font-size: 80px;">登入系統</h1>
+		<!-- //title -->
+		<div class="sub-main-w3">
+
+			</div>
+			<!-- vertical tabs -->
+			<div class="vertical-tab">
+				<div id="section1" class="section-w3ls">
+					<article>
+						<form action="" class="Login" onsubmit="return validateForm()">
+							<h2>帳號</h2>
+							<input id="usernameInput" type="text" placeholder="請輸入帳號">
+							<h2>密碼</h2>
+							<input id="passwordInput" type="password" placeholder="請輸入密碼">
+							<button type="submit">登入</button>
+					</form>
+					<script>
+						function validateForm() {
+							var username = document.getElementById("usernameInput").value;
+							var password = document.getElementById("passwordInput").value;
+							var correctUsername = "user";
+							var correctPassword = "0000";
+			
+							if (username !== correctUsername) {
+								alert("帳號錯誤");
+								return false;
+							}
+			
+							if (password !== correctPassword) {
+								alert("密碼輸入錯誤");
+								return false;
+							}
+					
+			
+							alert("帳號密碼輸入正確");
+							return true;
+						}
+					</script>
+
+					</article>
+				</div>
+			</div>	
+	
+	</div>	
+
+</body>
+
+</html>
