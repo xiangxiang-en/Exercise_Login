@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>登入</title>
-  <meta charset="utf-8">
+  <meta charset="utf-8"><!--設定格式避免亂碼-->
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -41,13 +41,16 @@
       function validateForm() {
         var username = document.forms[0]["username"].value;
         var password = document.forms[0]["password"].value;  
-        if (username === "user" && password === "0000")
-		{
+        if (username === "user" && password === "0000") {
           alert("歡迎進入。");
-        } 
-		  else
-		{
-          alert("使用者名稱或密碼錯誤。");
+          window.location.href = "https://www.google.com/";
+          return false;
+        } else {
+          if (username !== "user") {
+            alert("使用者名稱錯誤。");
+          } else {
+            alert("密碼錯誤。");
+          }
           return false;
         }
       }
